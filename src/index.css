@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --neutral-200: hsla(0, 0%, 100%, 0.75);
+  --neutral-100: hsl(0, 0%, 95%);
+
+  --fs: 15px;
+  --ff-heading: "Big Shoulders Display", sans-serif;
+  --ff-default: "Lexend Deca", sans-serif;
+}
+
+/* RESETS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 10px;
+}
+
+.app {
+  display: flex;
+  border-radius: 10px;
+  max-width: 900px;
+  overflow: hidden;
+}
+@media (max-width: 700px) {
+  body {
+    height: auto;
+  }
+  .app {
+    flex-direction: column;
+  }
+}
+
+/* Card */
+
+.card {
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.card__image {
+  height: 40px;
+  width: 70px;
+  object-fit: cover;
+}
+
+.card__title {
+  font-family: var(--ff-heading);
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--neutral-100);
+}
+
+.card__description {
+  font-family: var(--ff-default);
+  font-size: var(--fs);
+  color: var(--neutral-200);
+  max-width: 300px;
+  max-height: 100px;
+}
+
+.card__button {
+  width: fit-content;
+  padding: 15px 30px;
+  border-radius: 500px;
+  border: none;
+  font-family: var(--ff-default);
+  margin: 45px 0;
+  cursor: pointer;
+}
+
+.card__button:hover,
+.card__button:focus {
+  background-color: transparent;
+  border: 2px solid var(--neutral-100);
+}
